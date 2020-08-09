@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Search.css";
 
 const Search = ({ filterRecipes }) => {
   const recipes = JSON.parse(localStorage.getItem("recipes"));
 
   const searchRecipe = (e) => {
-    console.log("recipes", recipes);
     const input = e.target.value;
     // setSearchTerm(input);
     const filteredRecipes = recipes.filter((recipe) =>
       recipe.name.toLowerCase().includes(input)
     );
-    console.log("search term", input);
-    console.log(filteredRecipes);
     filterRecipes(filteredRecipes, input);
   };
   return (

@@ -13,7 +13,7 @@ const useFetch = (url) => {
         setRecipes(recipes);
         setTimeout(() => {
           setIsLoading(false);
-        }, 2);
+        }, 2000);
       } else {
         console.log("error");
       }

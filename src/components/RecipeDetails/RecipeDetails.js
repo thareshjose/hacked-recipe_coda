@@ -5,7 +5,7 @@ function RecipeDetails(props) {
   console.log(id);
   return (
     <div>
-      <h1>Hello</h1>
+      <h1>Recipe Details Page</h1>
     </div>
   );
 }

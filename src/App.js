@@ -3,14 +3,12 @@ import "./App.css";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home/Home";
 import RecipeDetails from "./components/RecipeDetails/RecipeDetails";
-import SearchResult from "./components/SearchResult/SearchResult";
 
 function App() {
   return (
     <Router basename="/">
       <Switch>
         <Route path="/" exact strict component={Home} />
-        <Route path="/search" exact strict component={SearchResult} />
 
         <Route path="/:id" exact strict component={RecipeDetails} />
       </Switch>

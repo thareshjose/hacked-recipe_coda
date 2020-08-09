@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import Header from "../Header/Header";
+import React, { useEffect } from "react";
 import Search from "../Search/Search";
 import "./Home.css";
 import useFetch from "./../../hooks/useFetch";

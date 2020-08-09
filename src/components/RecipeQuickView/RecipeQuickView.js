@@ -3,7 +3,6 @@ import Modal from "react-modal";
 import "./recipe-quick-view.css";
 
 Modal.setAppElement("#root");
-Modal.defaultStyles.overlay.backgroundColor = "rgba(255, 255, 255, 0.85)";
 const customStyles = {
   content: {
     top: "50%",
