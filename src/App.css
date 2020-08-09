@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --shadow-color: #c7c7c7;
+}
+
+@font-face {
+  font-family: "Metropolis Regular";
+  src: url("/Assets/Fonts/Metropolis/Metropolis-Regular.otf");
+}
+
+@font-face {
+  font-family: "Metropolis Black";
+  src: url("/Assets/Fonts/Metropolis/Metropolis-Black.otf");
+}
+
+@font-face {
+  font-family: "Metropolis Medium";
+  src: url("/Assets/Fonts/Metropolis/Metropolis-Medium.otf");
+}
+
+@font-face {
+  font-family: "Metropolis Thin";
+  src: url("/Assets/Fonts/Metropolis/Metropolis-Thin.otf");
+}
+
+@font-face {
+  font-family: "Metropolis Extra Bold";
+  src: url("/Assets/Fonts/Metropolis/Metropolis-ExtraBold.otf");
+}
+
+li {
+  list-style-type: none;
+}
+
+input {
+  border: none;
+}
+
+input:focus {
+  border: none;
+}
+
+body {
+  height: 100vh;
+  background-color: #f0f0f0;
+  background-image: url("/Assets/Images/Illustration2.png"),
+    url("/Assets/Images/Illustration1.png"),
+    url("/Assets/Images/Illustration4.png");
+  background-position: calc(100% + 70px) calc(0% - 180px),
+    calc(0% - 220px) calc(100% + 100px), calc(100% + 60px) calc(100% + 40px);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 15px;
+    background-size: 75% 50%;
+    background-image: url("/Assets/Images/Illustration2.png"),
+      url("/Assets/Images/Illustration1.png");
+    background-position: calc(100% + 80px) calc(0vh - 19vh),
+      calc(0% - 160px) calc(100% + 15vh);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    font-size: 14px;
+    background-size: 90% 30%;
+    background-image: url("/Assets/Images/Illustration2.png"),
+      url("/Assets/Images/Illustration1.png");
+    background-position: calc(100% + 50px) calc(0vh - 12vh),
+      calc(0% - 100px) calc(100% + 8vh);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}

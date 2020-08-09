@@ -1,0 +1,68 @@
+.popup-close-btn {
+  padding: 5px 10px;
+  background: black;
+  border: 1px solid black;
+  color: white;
+  font-family: "Metropolis Bold";
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  border-bottom-left-radius: 15px;
+}
+
+.popup-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-container img {
+  width: 50%;
+  margin-right: 3%;
+}
+.popup-recipe-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-recipe-details > * {
+  margin-bottom: 10px;
+}
+
+.popup-recipe-title {
+  font-family: "Metropolis Bold";
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.popup-recipe-price {
+  font-family: "Metropolis Bold";
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.popup-recipe-category {
+  font-size: 1em;
+  opacity: 0.6;
+}
+
+.popup-recipe-description {
+  font-family: "Metropolis Thin";
+  font-size: 1em;
+}
+
+@media screen and (max-width: 425px) {
+  .popup-container {
+    flex-direction: column;
+  }
+  .popup-container img {
+    width: 100%;
+  }
+  .popup-recipe-title {
+    margin-top: 10px;
+    font-size: 1.5em;
+  }
+  .popup-recipe-description {
+    font-size: 1.2em;
+  }
+}
