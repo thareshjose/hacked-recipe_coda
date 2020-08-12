@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
-import "./recipe-quick-view.css";
+import "./recipe-quick-view.scss";
 
 Modal.setAppElement("#root");
 const customStyles = {
@@ -17,22 +17,22 @@ const customStyles = {
 
 const RecipeQuickView = ({ recipe, showPopup, togglePopup }) => {
   return (
-    <div>
+    <div className="popup">
       <Modal
         isOpen={showPopup}
         onRequestClose={togglePopup}
         style={customStyles}
       >
-        <button onClick={togglePopup} className="popup-close-btn">
+        <button onClick={togglePopup} className="close-button">
           CLOSE
         </button>
-        <div className="popup-container">
+        <div className="popup__block">
           <img src={recipe.image} alt={recipe.name} />
-          <div className="popup-recipe-details">
-            <p className="popup-recipe-title">{recipe.name}</p>
-            <p className="popup-recipe-price">${recipe.price}</p>
-            <p className="popup-recipe-category">{recipe.category}</p>
-            <p className="popup-recipe-description">{recipe.description}</p>
+          <div className="popup__details">
+            <p className="popup__title">{recipe.name}</p>
+            <p className="popup__price">${recipe.price}</p>
+            <p className="popup__category">{recipe.category}</p>
+            <p className="popup__description">{recipe.description}</p>
           </div>
         </div>
       </Modal>

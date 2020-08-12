@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./RecipeCard.css";
+import "./RecipeCard.scss";
 import RecipeQuickView from "./../RecipeQuickView/RecipeQuickView";
 
 const RecipeCard = ({ recipe, index }) => {
@@ -24,19 +24,17 @@ const RecipeCard = ({ recipe, index }) => {
       )}
       <div className="recipe-card">
         <div
-          className="recipe-card-image-container"
+          className="recipe-card__image"
           style={{ backgroundImage: `url('${recipe.image}')` }}
         >
-          <p className="recipe-card-category">{`In ${recipe.category[0].toUpperCase()}${recipe.category.substring(
+          <p className="recipe-card__category">{`In ${recipe.category[0].toUpperCase()}${recipe.category.substring(
             1
           )}`}</p>
         </div>
-        <div className="card-title-container">
-          <div className="card-title-price-container">
-            <p className="card-recipe-title">{recipe.name}</p>
-            <p className="card-recipe-price">${recipe.price}</p>
-          </div>
-          <div className="card-icon">
+        <div className="recipe-card__header">
+          <p className="recipe-card__title">{recipe.name}</p>
+          <p className="recipe-card__price">${recipe.price}</p>
+          <div className="recipe-card__icon">
             {isFavorite ? (
               <img
                 src="/Assets/Icons/Icon feather-heart-color.png"
@@ -58,10 +56,10 @@ const RecipeCard = ({ recipe, index }) => {
             )}
           </div>
         </div>
-        <div className="card-recipe-description">
+        <div className="recipe-card__description">
           <p>{recipe.description}</p>
         </div>
-        <button className="card-view-more-btn" onClick={togglePopup}>
+        <button className="recipe-card__button" onClick={togglePopup}>
           View
         </button>
       </div>

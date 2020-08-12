@@ -1,4 +1,4 @@
-.popup-close-btn {
+.close-button {
   padding: 5px 10px;
   background: black;
   border: 1px solid black;
@@ -11,58 +11,58 @@
   border-bottom-left-radius: 15px;
 }
 
-.popup-container {
+.popup__block {
   display: flex;
   justify-content: space-between;
 }
 
-.popup-container img {
+.popup__block > img {
   width: 50%;
   margin-right: 3%;
 }
-.popup-recipe-details {
+.popup__details {
   display: flex;
   flex-direction: column;
 }
 
-.popup-recipe-details > * {
+.popup__details > * {
   margin-bottom: 10px;
 }
 
-.popup-recipe-title {
+.popup__title {
   font-family: "Metropolis Bold";
   font-weight: bold;
   font-size: 1.3em;
 }
 
-.popup-recipe-price {
+.popup__price {
   font-family: "Metropolis Bold";
   font-weight: bold;
   font-size: 1.1em;
 }
 
-.popup-recipe-category {
+.popup__category {
   font-size: 1em;
   opacity: 0.6;
 }
 
-.popup-recipe-description {
+.popup__description {
   font-family: "Metropolis Thin";
   font-size: 1em;
 }
 
 @media screen and (max-width: 425px) {
-  .popup-container {
+  .popup__block {
     flex-direction: column;
   }
-  .popup-container img {
+  .popup__block > img {
     width: 100%;
   }
-  .popup-recipe-title {
+  .popup__title {
     margin-top: 10px;
     font-size: 1.5em;
   }
-  .popup-recipe-description {
+  .popup__description {
     font-size: 1.2em;
   }
 }

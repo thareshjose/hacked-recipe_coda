@@ -1,13 +1,13 @@
 import React from "react";
-import "./loader.css";
+import "./loader.scss";
 
 const Loader = () => {
   return (
-    <div className="loader-container">
+    <div className="loader">
       <img
         src="/Assets/Images/pizza-slice.png"
         alt="pizza"
-        className="loader-img"
+        className="loader__image"
       />
     </div>
   );

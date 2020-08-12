@@ -1,5 +1,5 @@
 import React from "react";
-import "./Search.css";
+import "./Search.scss";
 
 const Search = ({ filterRecipes }) => {
   const recipes = JSON.parse(localStorage.getItem("recipes"));
@@ -13,16 +13,17 @@ const Search = ({ filterRecipes }) => {
     filterRecipes(filteredRecipes, input);
   };
   return (
-    <div className="search-container">
+    <div className="search">
       <img
         src="Assets/Icons/Icon feather-search.png"
         alt="search"
-        className="search-icon"
+        className="search__icon"
       />
       <input
         type="text"
         placeholder="Search your favourite recipe..."
         onChange={searchRecipe}
+        className="search__input"
       />
     </div>
   );

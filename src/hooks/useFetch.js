@@ -6,7 +6,10 @@ const useFetch = (url) => {
 
   useEffect(() => {
     const fetchRecipes = async () => {
-      const response = await fetch("http://starlord.hackerearth.com/recipe");
+      // const response = await fetch("http://starlord.hackerearth.com/recipe");
+      const response = await fetch(
+        "      http://cors-anywhere.herokuapp.com/http://starlord.hackerearth.com/recipe"
+      );
       if (response.ok) {
         const recipes = await response.json();
         localStorage.setItem("recipes", JSON.stringify(recipes));

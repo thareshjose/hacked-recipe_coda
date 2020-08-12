@@ -1,0 +1,45 @@
+.home-container {
+  width: 60%;
+  margin: auto;
+}
+
+.recipes {
+  columns: 4;
+  column-gap: 15px;
+  margin-bottom: 50px;
+
+  &--result-zero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Metropolis Extra Bold";
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .home-container {
+    width: 80%;
+  }
+  .recipes {
+    columns: 4;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-container {
+    width: 75%;
+  }
+  .recipes {
+    columns: 2;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .home-container {
+    width: 70%;
+  }
+  .recipes {
+    columns: 1;
+  }
+}
