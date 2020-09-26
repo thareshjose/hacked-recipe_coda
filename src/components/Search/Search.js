@@ -8,8 +8,9 @@ const Search = ({ filterRecipes }) => {
     const input = e.target.value;
     // setSearchTerm(input);
     const filteredRecipes = recipes.filter((recipe) =>
-      recipe.name.toLowerCase().includes(input)
+      recipe.name.toLowerCase().includes(input.toLowerCase())
     );
+    console.log(filteredRecipes);
     filterRecipes(filteredRecipes, input);
   };
   return (
